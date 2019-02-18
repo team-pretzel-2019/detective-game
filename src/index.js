@@ -6,7 +6,8 @@ userProfileForm.addEventListener('submit', function(event) {
     const formData = new FormData(userProfileForm);
    
     const userObject = {
-        name: formData.get('name')
+        name: formData.get('name'),
+        receivedClues: 1
     };
     
     const json = JSON.stringify(userObject);
