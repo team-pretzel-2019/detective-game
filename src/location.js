@@ -1,6 +1,7 @@
 import locationList from '../src/location-list.js';
 
 const locationHeader = document.getElementById('location');
+const clueP = document.getElementById('clue');
 
 const searchParams = new URLSearchParams(window.location.search);
 const locationName = searchParams.get('name');
@@ -17,3 +18,4 @@ console.log(currentLocation);
 
 
 locationHeader.textContent = currentLocation.title;
+clueP.textContent = currentLocation.clue;
