@@ -1,14 +1,14 @@
-const locations = ['location 1', 'location 2'];
+import locationList from '../src/location-list.js';
 
 const locationLinks = document.getElementById('location-links');
 
-for(let i = 0; i < locations.length; i++) {
-    const location = locations[i];
+for(let i = 0; i < locationList.length; i++) {
+    const location = locationList[i];
     
     const link = document.createElement('a');
     const li = document.createElement('li');
-    link.textContent = location;
-    link.href = 'location.html?name=' + encodeURIComponent(location);
+    link.textContent = location.title;
+    link.href = 'location.html?name=' + encodeURIComponent(location.name);
     li.appendChild(link);
     locationLinks.appendChild(li);
 
