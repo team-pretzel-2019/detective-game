@@ -1,8 +1,8 @@
 import locationList from '../src/location-list.js';
 import saveUser from './functions/saveUser.js';
+import loadUser from './functions/loadUser.js';
 
-const json = window.localStorage.getItem('user');
-const user = JSON.parse(json);
+const user = loadUser();
 
 console.log(user);
 

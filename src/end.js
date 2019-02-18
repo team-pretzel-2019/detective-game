@@ -1,7 +1,7 @@
+import loadUser from '../src/functions/loadUser.js';
 const results = document.getElementById('results');
 
-const json = window.localStorage.getItem('user');
-const user = JSON.parse(json);
+const user = loadUser();
 
 if(user.daysLeft === 0) {
     results.textContent = 'You\'re a big loser';

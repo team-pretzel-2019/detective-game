@@ -1,3 +1,5 @@
+import saveUser from './functions/saveUser.js';
+
 const userProfileForm = document.getElementById('user-profile');
 
 userProfileForm.addEventListener('submit', function(event) {
@@ -11,8 +13,7 @@ userProfileForm.addEventListener('submit', function(event) {
         daysLeft: 7
     };
     
-    const json = JSON.stringify(userObject);
-    window.localStorage.setItem('user', json);
-
+    saveUser(userObject);
+    
     window.location = 'pages/map.html';
 });
