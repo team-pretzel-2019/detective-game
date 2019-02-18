@@ -14,8 +14,8 @@ for(let i = 0; i < locationList.length; i++) {
         if(user.receivedClues === location.requiredClues) {
             link.href = 'location.html?name=' + encodeURIComponent(location.name);
             
-        }   else {
-                console.log('wrong');
+        } else {
+            console.log('wrong');
         }
     });
     link.textContent = location.title;

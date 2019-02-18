@@ -1,5 +1,10 @@
 import locationList from '../src/location-list.js';
 
+const json = window.localStorage.getItem('user');
+const user = JSON.parse(json);
+
+console.log(user);
+
 const locationHeader = document.getElementById('location');
 const clueP = document.getElementById('clue');
 
@@ -14,8 +19,14 @@ for(let i = 0; i < locationList.length; i++) {
         break;
     }
 }
-console.log(currentLocation);
-
 
 locationHeader.textContent = currentLocation.title;
 clueP.textContent = currentLocation.clue;
+
+// if you win do this
+user.receivedClues++;
+
+const newJson = JSON.stringify(user);
+window.localStorage.setItem('user', newJson);
+
+console.log(newJson);
