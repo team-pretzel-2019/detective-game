@@ -9,5 +9,8 @@ userProfileForm.addEventListener('submit', function(event) {
         name: formData.get('name')
     };
     
-    console.log(userObject.name);
+    const json = JSON.stringify(userObject);
+    window.localStorage.setItem('user', json);
+
+    window.location = 'pages/map.html';
 });
