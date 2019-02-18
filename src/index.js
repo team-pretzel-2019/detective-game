@@ -7,7 +7,8 @@ userProfileForm.addEventListener('submit', function(event) {
    
     const userObject = {
         name: formData.get('name'),
-        receivedClues: 1
+        receivedClues: 1,
+        daysLeft: 7
     };
     
     const json = JSON.stringify(userObject);

@@ -1,4 +1,5 @@
 import locationList from '../src/location-list.js';
+import saveUser from './functions/saveUser.js';
 
 const json = window.localStorage.getItem('user');
 const user = JSON.parse(json);
@@ -25,8 +26,13 @@ clueP.textContent = currentLocation.clue;
 
 // if you win do this
 user.receivedClues++;
+user.daysLeft--;
 
-const newJson = JSON.stringify(user);
-window.localStorage.setItem('user', newJson);
+saveUser(user);
 
-console.log(newJson);
+if(user.receivedClues === 4) {
+    window.location = 'end.html';
+}
+if(user.daysLeft === 0) {
+    window.location = 'end.html';
+}
