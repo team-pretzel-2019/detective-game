@@ -2,8 +2,11 @@ import checkCrossword from './check-crossword.js';
 import saveUser from '../../functions/saveUser.js';
 
 function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) {
+    const descriptionP = document.createElement('p');
+    descriptionP.textContent = currentLocation.description;
+    gameSection.appendChild(descriptionP);
     const promptP = document.createElement('p');
-    promptP.textContent = 'I need a four letter word for flying that ends in an \'o\'.';
+    promptP.textContent = '"I need a four letter word for flying that ends in an \'o\'."';
     gameSection.appendChild(promptP);
 
     const crosswordForm = document.createElement('form');
@@ -26,6 +29,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
     let wrongGuesses = 0;
     crosswordForm.addEventListener('submit', function(event) {
         event.preventDefault();
+        descriptionP.hidden = true;
 
         const formData = new FormData(crosswordForm);
         const wordGuess = formData.get('guess');

@@ -2,6 +2,10 @@ import diceGame from './dice-game.js';
 import saveUser from '../../functions/saveUser.js';
 
 function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
+    const descriptionP = document.createElement('p');
+    descriptionP.textContent = currentLocation.description;
+    gameSection.appendChild(descriptionP);
+
     const playButton = document.createElement('button');
     playButton.textContent = 'PLAY';
     gameSection.appendChild(playButton);
@@ -53,6 +57,7 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
     let gamesLost = 0;
     
     playButton.addEventListener('click', function() {
+        descriptionP.hidden = true;
         const gameResult = diceGame();
         playerRoll1.textContent = gameResult.playerRoll1 + ', ';
         playerRoll2.textContent = gameResult.playerRoll2;
@@ -68,7 +73,8 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
             user.receivedClues++;
             user.daysLeft--;
             saveUser(user);
-            gameSection.hidden = true;
+            descriptionP.hidden = true;
+            playButton.hidden = true;
         } else {
             gamesLost++;
             console.log(gamesLost); 
