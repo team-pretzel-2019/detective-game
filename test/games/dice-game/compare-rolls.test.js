@@ -4,19 +4,19 @@ const test = QUnit.test;
 
 QUnit.module('Compare rolls');
 
-test('if dice one is lower, return \'dice one is lower\'', function(assert) {
+test('if player roll is lower, return \'player loses\'', function(assert) {
     const diceroll1 = 3;
     const diceroll2 = 5;
     const result = compareRolls(diceroll1, diceroll2);
-    const expected = 'dice one is lower';
+    const expected = 'player loses';
     assert.equal(result, expected);
 });
 
-test('if dice one is high, return \'dice one is higher\'', function(assert) {
+test('if player roll is higher, return \'player wins\'', function(assert) {
     const diceroll1 = 6;
     const diceroll2 = 5;
     const result = compareRolls(diceroll1, diceroll2);
-    const expected = 'dice one is higher';
+    const expected = 'player wins';
     assert.equal(result, expected);
 });
 

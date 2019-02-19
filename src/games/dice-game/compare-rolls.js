@@ -1,8 +1,8 @@
-function compareRolls(diceroll1, diceroll2) {
-    if(diceroll1 < diceroll2) {
-        return 'dice one is lower';
-    } else if(diceroll1 > diceroll2) {
-        return 'dice one is higher';
+function compareRolls(playerRolls, opponentRolls) {
+    if(playerRolls < opponentRolls) {
+        return 'player loses';
+    } else if(playerRolls > opponentRolls) {
+        return 'player wins';
     }
     return 'tie';
 }
