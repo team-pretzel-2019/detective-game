@@ -1,8 +1,8 @@
 import locationList from '../src/location-list.js';
 import saveUser from './functions/saveUser.js';
 import loadUser from './functions/loadUser.js';
-import checkCrossword from './games/crossword/check-crossword.js';
 import createDiceCanvas from './games/dice-game/create-dice-canvas.js';
+import createCrosswordCanvas from './games/crossword/create-crossword-canvas.js';
 
 const user = loadUser();
 
@@ -28,39 +28,7 @@ if(currentLocation.id === 'location1') {
     createDiceCanvas(gameSection, currentLocation, gameOutcome, user);
 }
 if(currentLocation.id === 'location2') {
-    // p for the promtp
-    const promptP = document.createElement('p');
-    promptP.textContent = 'I need a four letter word for flying that ends in an \'o\'.';
-    gameSection.appendChild(promptP);
-    // form
-    const crosswordForm = document.createElement('form');
-        //input
-    const guessInput = document.createElement('input');
-    guessInput.type = 'text';
-    guessInput.name = 'guess';
-    guessInput.id = 'guess-input';
-    guessInput.placeholder = 'Enter guess here';
-    crosswordForm.appendChild(guessInput);
-        //submit
-    const submitButton = document.createElement('button');
-    submitButton.textContent = 'Submit';
-    crosswordForm.appendChild(submitButton);
-
-    gameSection.appendChild(crosswordForm);
-
-    crosswordForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(crosswordForm);
-        const wordGuess = formData.get('guess');
-        const result = checkCrossword(wordGuess);
-        console.log(result);        
-
-    });
-    // wrong guess response
-
-    // game outcome
-        // win or lose message
+    createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user);
 }
 
 saveUser(user);
