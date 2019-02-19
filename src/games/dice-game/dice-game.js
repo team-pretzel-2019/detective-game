@@ -18,3 +18,5 @@ function diceGame() {
     };
     return diceGameObject;
 }
+
+export default diceGame;
