@@ -47,8 +47,8 @@ locationHeader.textContent = currentLocation.title;
 clueP.textContent = currentLocation.clue;
 
 // if you win do this
-// user.receivedClues++;
-// user.daysLeft--;
+user.receivedClues++;
+user.daysLeft--;
 
 saveUser(user);
 

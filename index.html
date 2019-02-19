@@ -8,13 +8,23 @@
 </head>
 <body>
     <header>
-        <h1>splash page</h1>
     </header>
     <main>
-        <form id="user-profile">
-            Name: <input type="text" name="name" required>
-            <button>SUBMIT</button>
-        </form>
+        <section id="title">
+            <h1>Before the Week Ends</h1>
+            <p>An interactive whodunnit.</p>
+            <button id="start-story">Begin Story</button>
+        </section>
+        <section id="intro" hidden>
+            <p>You are a detective. You discover a dead body in the allery behind your office. A note is pinned to the body. It reads, "You have 7 days to rescue the kidnapped child of this murder victim." You notice the note is written on a cocktail napkin from a nearby bar - your first clue.</p>
+            <button id="enter-name">Continue</button>
+        </section>
+        <section id="user-area" hidden>
+            <form id="user-profile">
+                Name: <input type="text" name="name" required>
+                <button>SUBMIT</button>
+            </form>
+        </section>
     </main>
     <footer>
         

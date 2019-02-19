@@ -37,7 +37,7 @@ Locations:
 12. Theatre
 
 Prologue:
-1. You discover a dead body inside your office and a note from the murderer saying you have 7 days to rescue the kidnapped child of the murder victim. The note is your first clue. Written on a cocktail napkin (the name of the bar is printed on it).
+1. You discover a dead body in the allery behind your office. A note is pinned to the body - you have 7 days to rescue the kidnapped child of the murder victim. The note is your first clue. Written on a cocktail napkin (the name of the bar is printed on it).
 2. Enter name
 3. Choose Detective avatar
 
