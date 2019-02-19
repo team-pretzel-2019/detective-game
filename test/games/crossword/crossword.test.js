@@ -1,13 +1,7 @@
+import checkCrossword from '../../../src/games/crossword/check-crossword.js';
+
 const test = QUnit.test;
 QUnit.module('crossword testing');
-
-function checkCrossword(guess) {
-    const lowerCaseGuess = guess.toLowerCase();
-    if(lowerCaseGuess === 'aero') {
-        return 'player wins';
-    }
-    return 'player loses';
-}
 
 test('if input is aero return win message', function(assert) {
     const guess = 'aero';
