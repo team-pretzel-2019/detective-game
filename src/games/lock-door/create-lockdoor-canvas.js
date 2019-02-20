@@ -47,7 +47,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
     codeForm.appendChild(guessFour);
 
     const submitButton = document.createElement('button');
-    submitButton.textContent = 'SUBMIT';
+    submitButton.textContent = 'Unlock';
     codeForm.appendChild(submitButton);
 
     gameSection.appendChild(codeForm);
