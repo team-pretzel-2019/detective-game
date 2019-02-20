@@ -37,9 +37,6 @@ if(currentLocation.id === 'location3') {
 
 saveUser(user);
 
-if(user.receivedClues === 4) {
-    window.location = 'end.html';
-}
 if(user.daysLeft === 0) {
     window.location = 'end.html';
 }

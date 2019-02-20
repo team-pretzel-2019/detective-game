@@ -79,11 +79,11 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
             winMessage.textContent = currentLocation.clue;
             const continueButton = document.createElement('a');
             continueButton.textContent = 'continue...';
-            continueButton.href = './end.html';
+            continueButton.href = './boss.html';
             gameOutcome.appendChild(winMessage);
             gameOutcome.appendChild(continueButton);
 
-            window.setTimeout(goToEnd, 2000);
+            window.setTimeout(goToBoss, 2000);
         }
 
         if(wrongGuesses === 3) {
@@ -97,8 +97,8 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
     });
 }
 
-function goToEnd() {
-    window.location = './end.html';
+function goToBoss() {
+    window.location = './boss.html';
 }
 
 export default createLockdoorCanvas;
