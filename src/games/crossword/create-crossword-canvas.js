@@ -33,6 +33,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
     gameSection.appendChild(wrongGuessP);
     
     let wrongGuesses = 0;
+
     crosswordForm.addEventListener('submit', function(event) {
         event.preventDefault();
         descriptionP.hidden = true;
@@ -62,7 +63,6 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
             user.daysLeft--;
             saveUser(user);
         }
-
     });
 }
 

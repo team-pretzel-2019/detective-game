@@ -63,14 +63,19 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
     
     playButton.addEventListener('click', function() {
         descriptionP.hidden = true;
+
         const gameResult = diceGame();
+
         playerRoll1.textContent = gameResult.playerRoll1 + ', ';
         playerRoll2.textContent = gameResult.playerRoll2;
         playerTotalResults.textContent = gameResult.playerRoll1 + gameResult.playerRoll2;
+
         opponentRoll1.textContent = gameResult.opponentRoll1 + ', ';
         opponentRoll2.textContent = gameResult.opponentRoll2;
         opponentTotalResults.textContent = gameResult.opponentRoll1 + gameResult.opponentRoll2;
+
         resultMessage.textContent = gameResult.result;
+
         if(gameResult.result === 'player wins') {
             const clueP = document.createElement('p');
             clueP.textContent = currentLocation.clue;
@@ -82,9 +87,8 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
             playButton.hidden = true;
         } else {
             gamesLost++;
-            console.log(gamesLost); 
-            
         }
+        
         if(gamesLost === 3) {
             gameSection.hidden = true;
             const lossP = document.createElement('p');

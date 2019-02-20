@@ -16,6 +16,7 @@ function diceGame() {
         opponentRoll2: opponentRoll2,
         result: result
     };
+    
     return diceGameObject;
 }
 

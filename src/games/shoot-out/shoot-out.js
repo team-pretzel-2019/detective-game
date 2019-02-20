@@ -1,12 +1,12 @@
 import draw from './draw/draw.js';
 
-function shootOut(popUpSection, villain, totalTime, winP) {
-    
+function shootOut(popUpSection, villain, totalTime, winP) { 
     popUpSection.hidden = true;
     
     let startTime = Date.now();
     
     let villainHP = 5;
+
     villain.addEventListener('click', function() {
         villainHP--;
     });
@@ -19,12 +19,15 @@ function shootOut(popUpSection, villain, totalTime, winP) {
             winP.textContent = 'lose';
             return;
         }
+
         if(villainHP === 0) {
             clearInterval(timer);
             winP.textContent = 'win';
             return;
         }
+
         draw(timePassed, villain);
+        
     }, 15);
 }
 

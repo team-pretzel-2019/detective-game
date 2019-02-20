@@ -2,7 +2,6 @@ import saveUser from '../../functions/saveUser.js';
 import checkLock from './check-lock.js';
 import allGames from '../all-games-list.js';
 
-
 function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
@@ -53,6 +52,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
     gameSection.appendChild(codeForm);
 
     const wrongGuessP = document.createElement('p');
+
     let wrongGuesses = 0;
 
     codeForm.addEventListener('submit', function(event) {
@@ -70,8 +70,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
             wrongGuessP.textContent = 'Nope! It\'s still locked. Try again.';
             gameSection.appendChild(wrongGuessP);
             wrongGuesses++;
-        }
-        else {
+        } else {
             gameSection.hidden = true;
             const mapButton = document.getElementById('map-button');
             mapButton.hidden = true;

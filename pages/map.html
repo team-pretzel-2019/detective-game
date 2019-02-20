@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Map</title>
+    <link rel="stylesheet" type="text/css" href="../css/map.css">
+    <title>Our Fair City</title>
 </head>
 <body>
     <header>
-        <h1>Our Fair City</h1>
-        <p>Pick a location based on your latest clue.</p>
-        <a href="../index.html">Home</a>
+
+        <a href="map.html">Map</a>
+        <a href="credits.html">Credits</a>
+
     </header>
     <main>
+
+        <h1>Our Fair City</h1>
+        <p>Pick a location based on your latest clue.</p>
+
         <section id="status-bar">
             <p id="status-bar-title">Status Bar</p>
             <img id="avatar-image" src="" alt="avatar image">
@@ -21,15 +26,13 @@
             <p id="clues-title">Clues: </p>
             <ul id="clues-list"></ul>
         </section>
-        <section id="map-area">
-            <ul id="location-links">
 
-            </ul>
+        <section id="map-area">
+            <ul id="location-links"></ul>
         </section>
+
     </main>
-    <footer>
-        
-    </footer>
+    
     <script type="module" src="../src/map.js"></script>
 </body>
 </html>

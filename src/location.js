@@ -4,12 +4,14 @@ import loadUser from './functions/loadUser.js';
 import createDiceCanvas from './games/dice-game/create-dice-canvas.js';
 import createCrosswordCanvas from './games/crossword/create-crossword-canvas.js';
 import createLockdoorCanvas from './games/lock-door/create-lockdoor-canvas.js';
-
-const user = loadUser();
+import createStatusBar from './functions/create-status-bar.js';
 
 const locationHeader = document.getElementById('location');
 const gameSection = document.getElementById('game');
 const gameOutcome = document.getElementById('game-outcome');
+
+const user = loadUser();
+createStatusBar(user);
 
 const searchParams = new URLSearchParams(window.location.search);
 const locationName = searchParams.get('name');
