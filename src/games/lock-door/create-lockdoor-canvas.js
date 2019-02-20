@@ -79,6 +79,8 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
             continueButton.href = './end.html';
             gameOutcome.appendChild(winMessage);
             gameOutcome.appendChild(continueButton);
+
+            window.setTimeout(goToEnd, 2000);
         }
 
         if(wrongGuesses === 3) {
@@ -90,6 +92,10 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
             saveUser(user);
         }
     });
+}
+
+function goToEnd() {
+    window.location = './end.html';
 }
 
 export default createLockdoorCanvas;
