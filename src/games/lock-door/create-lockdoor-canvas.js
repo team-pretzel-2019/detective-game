@@ -1,13 +1,16 @@
 import saveUser from '../../functions/saveUser.js';
 import checkLock from './check-lock.js';
+import allGames from '../all-games-list.js';
+
 
 function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
     gameSection.appendChild(descriptionP);
-    const gamePromptP = document.createElement('p');
-    gamePromptP.textContent = 'Enter the code to unlock the door:';
-    gameSection.appendChild(gamePromptP);
+
+    const instructions = document.createElement('p');
+    instructions.textContent = allGames[2].description;
+    gameSection.appendChild(instructions);
     
     const codeForm = document.createElement('form');
 

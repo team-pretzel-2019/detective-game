@@ -1,13 +1,18 @@
 import diceGame from './dice-game.js';
 import saveUser from '../../functions/saveUser.js';
+import allGames from '../all-games-list.js';
 
 function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
     gameSection.appendChild(descriptionP);
+    
+    const instructions = document.createElement('p');
+    instructions.textContent = allGames[0].description;
+    gameSection.appendChild(instructions);
 
     const playButton = document.createElement('button');
-    playButton.textContent = 'PLAY';
+    playButton.textContent = 'Roll Dice';
     gameSection.appendChild(playButton);
 
     const playerResultsSection = document.createElement('section');

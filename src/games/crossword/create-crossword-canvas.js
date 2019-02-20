@@ -1,10 +1,16 @@
 import checkCrossword from './check-crossword.js';
 import saveUser from '../../functions/saveUser.js';
+import allGames from '../all-games-list.js';
+
 
 function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
     gameSection.appendChild(descriptionP);
+
+    const instructions = document.createElement('p');
+    instructions.textContent = allGames[1].description;
+    gameSection.appendChild(instructions);
     const promptP = document.createElement('p');
     promptP.textContent = '"I need a four letter word for flying that ends in an \'o\'."';
     gameSection.appendChild(promptP);
@@ -18,7 +24,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
     crosswordForm.appendChild(guessInput);
 
     const submitButton = document.createElement('button');
-    submitButton.textContent = 'Submit';
+    submitButton.textContent = 'Guess Word';
     crosswordForm.appendChild(submitButton);
 
     gameSection.appendChild(crosswordForm);
@@ -41,7 +47,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
         } else {
             gameSection.hidden = true;
             const winMessageP = document.createElement('p');
-            winMessageP.textContent = 'That\'s it! You\'re smarter than you look. ' + currentLocation.clue;
+            winMessageP.textContent = currentLocation.clue;
             gameOutcome.appendChild(winMessageP);
             user.receivedClues++;
             user.daysLeft--;
