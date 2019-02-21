@@ -28,12 +28,23 @@ main {
     position: relative;
     z-index: 1;
     text-align: center;
-    font-size: 30px;
+    font-size: 50px;
+    font-family: 'Inconsolata', monospace;
 }
 
 button {
-    font-size: 20px;
+    font-size: 18px;
     padding: 15px 25px;
+    background-color: #cf2118;
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+ } 
+
+button:hover {
+    background-color: darkred;
+    box-shadow: 0 0 10px 2px rgb(150, 20, 20);
 }
 
 #intro {
@@ -50,3 +61,4 @@ button {
     text-align: center;
     margin: 0px auto;
 }
+

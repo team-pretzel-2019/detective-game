@@ -11,7 +11,6 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
     instructions.textContent = allGames[2].description;
     instructionSection.appendChild(instructions);
 
-    // adding a prompt for code
     const promptP = document.createElement('p');
     promptP.textContent = 'Deduce and enter a four digit code to enter!';
     prompt.appendChild(promptP);
@@ -60,9 +59,13 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
 
     let wrongGuesses = 0;
 
+    const mapAnchor = document.createElement('a');
+    mapAnchor.href = './map.html';
+    mapAnchor.textContent = 'Return to Map';
+    mapAnchor.id = 'map-anchor';
+
     codeForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        // descriptionP.hidden = true;
 
         const codeFormData = new FormData(codeForm);
         const guess1 = codeFormData.get('guess-one');
@@ -95,8 +98,10 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
             const loseMessage = document.createElement('p');
             loseMessage.textContent = '"It didn\'t work. I hear him coming. HURRY, get out of here before he gets you too! Come back later!';
             gameOutcome.appendChild(loseMessage);
+            gameOutcome.appendChild(mapAnchor);
             user.daysLeft--;
             saveUser(user);
+            submitButton.hidden = true;
         }
     });
 }

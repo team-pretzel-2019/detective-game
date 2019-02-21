@@ -2,7 +2,6 @@ import checkCrossword from './check-crossword.js';
 import saveUser from '../../functions/saveUser.js';
 import allGames from '../all-games-list.js';
 
-
 function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
@@ -31,12 +30,16 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, 
     
     const wrongGuessP = document.createElement('p');
     gameSection.appendChild(wrongGuessP);
+
+    const mapAnchor = document.createElement('a');
+    mapAnchor.href = './map.html';
+    mapAnchor.textContent = 'Return to Map';
+    mapAnchor.id = 'map-anchor';
     
     let wrongGuesses = 0;
 
     crosswordForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        // descriptionP.hidden = true;
 
         const formData = new FormData(crosswordForm);
         const wordGuess = formData.get('guess');
@@ -46,20 +49,22 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, 
             wrongGuessP.textContent = 'Sorry chum, ' + wordGuess + ' ain\'t what I\'m looking for. Guess again.';
             wrongGuesses++;
         } else {
-            // gameSection.hidden = true;
             const winMessageP = document.createElement('p');
             winMessageP.textContent = currentLocation.clue;
             gameOutcome.appendChild(winMessageP);
+            gameOutcome.appendChild(mapAnchor);
             user.receivedClues++;
             user.daysLeft--;
             saveUser(user);
+            submitButton.hidden = true;
         }  
         
         if(wrongGuesses === 3) {
-            // gameSection.hidden = true;
+            submitButton.hidden = true;
             const loseMessageP = document.createElement('p');
             loseMessageP.textContent = 'You lost this game and wasted a day, try again tomorrow.';
             gameOutcome.appendChild(loseMessageP);
+            gameOutcome.appendChild(mapAnchor);
             user.daysLeft--;
             saveUser(user);
         }
