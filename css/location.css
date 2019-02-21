@@ -53,16 +53,20 @@ body {
     justify-content: center;
     align-items: center;
     color: red;
+    font-size: 50px;
+    margin-right: 25px;
 }
 #description {
     display: flex;
     justify-content: center;
     align-items: center;  
+    margin: 15px;
 }
 #instructions {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 15px;
 }
 #right-bottom-right-bottom {
     grid-row-start: 2;
@@ -76,6 +80,11 @@ body {
 #game-left {
     grid-column-start: 1
 }
+#prompt {
+    display: flex;
+    justify-content: center;
+}
+
 
 
 /* left side */

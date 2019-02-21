@@ -1,5 +1,9 @@
 html {
-    background-image: url('../assets/img/locations/boss-background-1.jpg');
+    background: url('../assets/img/locations/boss-background-1.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #range {
@@ -8,11 +12,13 @@ html {
 }
 
 #pop-up {
-    background-color: white;
-    width: 300px;
+    background-color: rgba(255, 255, 255, .9);
+    width: 80%;
     position: relative;
+    bottom: 45px;
     margin: 0px auto;
     text-align: center;
+    padding: 10px;
 }
 
 button {

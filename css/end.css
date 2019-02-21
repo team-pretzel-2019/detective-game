@@ -1,0 +1,26 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+#top {
+    grid-row-start: 1; 
+}
+
+#bottom {
+    grid-row-start: 2; 
+
+    display: grid;
+    grid-template-columns: 33% 66%;
+}
+
+#right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
