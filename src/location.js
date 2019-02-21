@@ -37,6 +37,9 @@ if(currentLocation.id === 'location1') {
     const tallImage = document.createElement('img');
     tallImage.src = currentLocation.tallImage;
     tallImageDiv.appendChild(tallImage);
+    const gameImage = document.createElement('img');
+    gameImage.src = currentLocation.gameImage;
+    gameImageDiv.appendChild(gameImage);
 }
 if(currentLocation.id === 'location2') {
     createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);

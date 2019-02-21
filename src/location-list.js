@@ -8,7 +8,7 @@ const locationList = [
         requiredClues: 1,
         icon: '../assets/img/icons/cocktail-icon-1.png',
         tallImage: '../assets/img/locations/casino-location-tall-1.jpg',
-        gameImage: '../assets/img/locations/casino-location-tall-2.jpg'
+        gameImage: '../assets/img/locations/dice.jpg'
     },
     {
         name: 'manestreetbarbers',
@@ -19,7 +19,7 @@ const locationList = [
         requiredClues: 2,
         icon: '../assets/img/icons/barber-icon-1.png',
         tallImage: '../assets/img/locations/barber-location-tall-1.jpg',
-        gameImage: '../assets/img/locations/casino-location-tall-2.jpg'
+        gameImage: '../assets/img/locations/crossword-black.jpg'
     },
     {
         name: 'penthouseapartment',

@@ -18,7 +18,8 @@ userProfileForm.addEventListener('submit', function(event) {
     const userObject = {
         name: formData.get('name'),
         receivedClues: 1,
-        daysLeft: 7
+        daysLeft: 7,
+        avatar: formData.get('avatar')
     };
     
     saveUser(userObject);

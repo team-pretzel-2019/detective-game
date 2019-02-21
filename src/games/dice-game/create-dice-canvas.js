@@ -18,6 +18,7 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
 
     const playButton = document.createElement('button');
     playButton.textContent = 'Roll Dice';
+    playButton.id = 'play-button';
     gameSection.appendChild(playButton);
 
     const playerResultsSection = document.createElement('section');
@@ -64,6 +65,11 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
     resultsMessageSection.appendChild(resultMessage);
     gameSection.appendChild(resultsMessageSection);
 
+    const mapAnchor = document.createElement('a');
+    mapAnchor.href = './map.html';
+    mapAnchor.textContent = 'Return to Map';
+    mapAnchor.id = 'map-anchor';
+
     let gamesLost = 0;
     
     playButton.addEventListener('click', function() {
@@ -85,20 +91,21 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
             const clueP = document.createElement('p');
             clueP.textContent = currentLocation.clue;
             gameOutcome.appendChild(clueP);
+            gameOutcome.appendChild(mapAnchor);
             user.receivedClues++;
             user.daysLeft--;
             saveUser(user);
-            // descriptionP.hidden = true;
-            // playButton.hidden = true;
+            playButton.hidden = true;
         } else {
             gamesLost++;
         }
         
         if(gamesLost === 3) {
-            // gameSection.hidden = true;
+            playButton.hidden = true;
             const lossP = document.createElement('p');
             lossP.textContent = 'You\'ve lost the game and lost a day, return to the map';
             gameOutcome.appendChild(lossP);
+            gameOutcome.appendChild(mapAnchor);
             user.daysLeft--;
             saveUser(user);
         }

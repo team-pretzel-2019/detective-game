@@ -36,7 +36,7 @@ button {
     padding: 15px 25px;
 }
 
-#intro-container {
+#intro {
     position: relative;
     z-index: 1;
     background-color: rgba(255, 255, 255, 0.5);
@@ -48,4 +48,5 @@ button {
     width: 75%;
     padding: 10px;
     text-align: center;
+    margin: 0px auto;
 }
