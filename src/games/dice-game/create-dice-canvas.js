@@ -6,10 +6,13 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
     description.appendChild(descriptionP);
+
+    const brake = document.createElement('br');
+    description.appendChild(brake);
     
     const instructions = document.createElement('p');
     instructions.textContent = allGames[0].description;
-    instructionSection.appendChild(instructions);
+    description.appendChild(instructions);
 
     // create prompt
     const promptP = document.createElement('p');
