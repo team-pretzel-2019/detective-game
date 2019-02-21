@@ -12,6 +12,8 @@ createStatusBar(user);
 for(let i = 0; i < locationList.length; i++) {
     const location = locationList[i];
     const link = document.createElement('a');
+    const icon = document.createElement('img');
+    icon.src = location.icon;
 
     // get rid of list item elmCreate
     // const li = document.createElement('li');
@@ -30,9 +32,8 @@ for(let i = 0; i < locationList.length; i++) {
         }
     });
     
-    link.textContent = location.title;
-    // add id tag to each location by their object name
+    // link.textContent = location.title;
     link.id = location.name;
-    // li.appendChild(link);
+    link.appendChild(icon);
     locationLinks.appendChild(link);
 }

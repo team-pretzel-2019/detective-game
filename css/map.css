@@ -91,6 +91,9 @@ h1 {
     color: red;
     margin-right: 250px;
 }
+#map-container img {
+    width: 65px;
+}
 #joesbar {
     grid-column-start: 5;
     grid-row-start: 4;
