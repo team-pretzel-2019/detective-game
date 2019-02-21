@@ -35,6 +35,9 @@ body {
 #right-bottom-left {
     grid-column-start: 1;
 }
+#right-bottom-left img {
+    height: 100%;
+}
 #right-bottom-right {
     grid-column-start: 2;
     display: grid;

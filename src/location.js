@@ -12,6 +12,7 @@ const gameOutcome = document.getElementById('game-outcome');
 const description = document.getElementById('description');
 const instructionSection = document.getElementById('instructions');
 const prompt = document.getElementById('prompt');
+const tallImageDiv = document.getElementById('right-bottom-left');
 
 const user = loadUser();
 createStatusBar(user);
@@ -32,12 +33,21 @@ locationHeader.textContent = currentLocation.title;
 
 if(currentLocation.id === 'location1') {
     createDiceCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
+    const tallImage = document.createElement('img');
+    tallImage.src = currentLocation.tallImage;
+    tallImageDiv.appendChild(tallImage);
 }
 if(currentLocation.id === 'location2') {
     createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
+    const tallImage = document.createElement('img');
+    tallImage.src = currentLocation.tallImage;
+    tallImageDiv.appendChild(tallImage);
 }
 if(currentLocation.id === 'location3') {
     createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
+    const tallImage = document.createElement('img');
+    tallImage.src = currentLocation.tallImage;
+    tallImageDiv.appendChild(tallImage);
 }
 
 saveUser(user);
