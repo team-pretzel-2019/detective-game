@@ -7,34 +7,58 @@
     <title>Location</title>
 </head>
 <body>
-    <header>
+    <div id="right">
 
-        <a href="map.html">Map</a>
-        <a href="credits.html">Credits</a>
+        <div id="right-top">
+            <div id="nav-bar">
+                <a href="map.html">Map</a>
+                <a href="credits.html">Credits</a>
+            </div>
+        </div>
 
-    </header>
-    <main>
+        <div id="right-bottom">
 
-        <h1 id="location"></h1>
+            <div id="right-bottom-left">
+                <img src="" alt="barberShopimg">
+            </div>
 
-        <section id="game"></section>
+            <div id="right-bottom-right">
+                <div id="right-bottom-right-top">
+                    <div id="location-title"></div>
+                    <div id="description"></div>
+                    <div id="instructions"></div>
+                </div>
+                
+                <div id="right-bottom-right-bottom">
+                        <div id="game-left">
+                            <div id="prompt"></div>
+                        </div>
+                        <div id="game-right">
+                            <section id="game"></section>
+                            <section id="game-outcome"></section>
+                        </div>
+                </div>
+            </div>
 
-        <section id="game-outcome"></section>
+        </div>
 
-        <section>
-            <a href="../pages/map.html" id="map-button">Return to Map</a>
-        </section>
+    </div>
 
-        <section id="status-bar">
-            <p id="status-bar-title">Status Bar</p>
-            <img id="avatar-image" src="" alt="avatar image">
-            <p id="username">Name: </p>
-            <p id="days-left">Days Left: </p>
-            <p id="clues-title">Clues: </p>
-            <ul id="clues-list"></ul>
-        </section>
-
-    </main>
+    
+    <div id="left">
+        <div id="avatar-image-container">
+            <img src="../assets/img/detective-1-ver2.png" alt="avatar-image">
+        </div>
+        <div id="status-bar-container">
+            <div id="user-info">
+                <p id="username">Name: </p>
+                <p id="days-left">Days Left: </p>
+                <p id="clues-title">Clues: </p>
+                <ul id="clues-list"></ul>
+            </div>
+        </div>
+    </div>
+    
 
     <script type="module" src="../src/location.js"></script>
 </body>

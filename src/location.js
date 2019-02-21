@@ -6,9 +6,12 @@ import createCrosswordCanvas from './games/crossword/create-crossword-canvas.js'
 import createLockdoorCanvas from './games/lock-door/create-lockdoor-canvas.js';
 import createStatusBar from './functions/create-status-bar.js';
 
-const locationHeader = document.getElementById('location');
+const locationHeader = document.getElementById('location-title');
 const gameSection = document.getElementById('game');
 const gameOutcome = document.getElementById('game-outcome');
+const description = document.getElementById('description');
+const instructionSection = document.getElementById('instructions');
+const prompt = document.getElementById('prompt');
 
 const user = loadUser();
 createStatusBar(user);
@@ -28,13 +31,13 @@ for(let i = 0; i < locationList.length; i++) {
 locationHeader.textContent = currentLocation.title;
 
 if(currentLocation.id === 'location1') {
-    createDiceCanvas(gameSection, currentLocation, gameOutcome, user);
+    createDiceCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
 }
 if(currentLocation.id === 'location2') {
-    createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user);
+    createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
 }
 if(currentLocation.id === 'location3') {
-    createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user);
+    createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
 }
 
 saveUser(user);

@@ -2,14 +2,19 @@ import saveUser from '../../functions/saveUser.js';
 import checkLock from './check-lock.js';
 import allGames from '../all-games-list.js';
 
-function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
+function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
-    gameSection.appendChild(descriptionP);
+    description.appendChild(descriptionP);
 
     const instructions = document.createElement('p');
     instructions.textContent = allGames[2].description;
-    gameSection.appendChild(instructions);
+    instructionSection.appendChild(instructions);
+
+    // adding a prompt for code
+    const promptP = document.createElement('p');
+    promptP.textContent = 'Deduce and enter a four digit code to enter!';
+    prompt.appendChild(promptP);
     
     const codeForm = document.createElement('form');
 
@@ -57,7 +62,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
 
     codeForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        descriptionP.hidden = true;
+        // descriptionP.hidden = true;
 
         const codeFormData = new FormData(codeForm);
         const guess1 = codeFormData.get('guess-one');
@@ -71,9 +76,9 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
             gameSection.appendChild(wrongGuessP);
             wrongGuesses++;
         } else {
-            gameSection.hidden = true;
-            const mapButton = document.getElementById('map-button');
-            mapButton.hidden = true;
+            // gameSection.hidden = true;
+            // const mapButton = document.getElementById('map-button');
+            // mapButton.hidden = true;
             const winMessage = document.createElement('p');
             winMessage.textContent = currentLocation.clue;
             const continueButton = document.createElement('a');
@@ -86,7 +91,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user) {
         }
 
         if(wrongGuesses === 3) {
-            gameSection.hidden = true;
+            // gameSection.hidden = true;
             const loseMessage = document.createElement('p');
             loseMessage.textContent = '"It didn\'t work. I hear him coming. HURRY, get out of here before he gets you too! Come back later!';
             gameOutcome.appendChild(loseMessage);

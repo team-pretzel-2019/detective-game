@@ -2,14 +2,19 @@ import diceGame from './dice-game.js';
 import saveUser from '../../functions/saveUser.js';
 import allGames from '../all-games-list.js';
 
-function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
+function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
-    gameSection.appendChild(descriptionP);
+    description.appendChild(descriptionP);
     
     const instructions = document.createElement('p');
     instructions.textContent = allGames[0].description;
-    gameSection.appendChild(instructions);
+    instructionSection.appendChild(instructions);
+
+    // create prompt
+    const promptP = document.createElement('p');
+    promptP.textContent = 'Roll dem dice KID';
+    prompt.appendChild(promptP);
 
     const playButton = document.createElement('button');
     playButton.textContent = 'Roll Dice';
@@ -62,7 +67,7 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
     let gamesLost = 0;
     
     playButton.addEventListener('click', function() {
-        descriptionP.hidden = true;
+        // descriptionP.hidden = true;
 
         const gameResult = diceGame();
 
@@ -83,14 +88,14 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user) {
             user.receivedClues++;
             user.daysLeft--;
             saveUser(user);
-            descriptionP.hidden = true;
-            playButton.hidden = true;
+            // descriptionP.hidden = true;
+            // playButton.hidden = true;
         } else {
             gamesLost++;
         }
         
         if(gamesLost === 3) {
-            gameSection.hidden = true;
+            // gameSection.hidden = true;
             const lossP = document.createElement('p');
             lossP.textContent = 'You\'ve lost the game and lost a day, return to the map';
             gameOutcome.appendChild(lossP);

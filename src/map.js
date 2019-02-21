@@ -3,7 +3,7 @@ import saveUser from './functions/saveUser.js';
 import loadUser from './functions/loadUser.js';
 import createStatusBar from './functions/create-status-bar.js';
 
-const locationLinks = document.getElementById('location-links');
+const locationLinks = document.getElementById('map');
 
 const user = loadUser();
 createStatusBar(user);
@@ -11,7 +11,9 @@ createStatusBar(user);
 for(let i = 0; i < locationList.length; i++) {
     const location = locationList[i];
     const link = document.createElement('a');
-    const li = document.createElement('li');
+
+    // get rid of list item elmCreate
+    // const li = document.createElement('li');
 
     link.addEventListener('click', function() {
         if(user.receivedClues === location.requiredClues) {
@@ -27,6 +29,8 @@ for(let i = 0; i < locationList.length; i++) {
     });
 
     link.textContent = location.title;
-    li.appendChild(link);
-    locationLinks.appendChild(li);
+    // add id tag to each location by their object name
+    link.id = location.name;
+    // li.appendChild(link);
+    locationLinks.appendChild(link);
 }

@@ -7,31 +7,54 @@
     <title>Our Fair City</title>
 </head>
 <body>
-    <header>
 
-        <a href="map.html">Map</a>
-        <a href="credits.html">Credits</a>
+    
+    <div id="right">
+        
+        <video autoplay muted loop id="index-video">
+            <source src="../assets/video/rain-black-white.mp4" type="video/mp4">
+        </video>
 
-    </header>
-    <main>
+        <div id="nav-bar">
+            <a href="map.html">Map</a>
+            <a href="credits.html">Credits</a>
+        </div>
 
-        <h1>Our Fair City</h1>
-        <p>Pick a location based on your latest clue.</p>
+        <div id="map-header">
+            <h1>Our Fair City</h1>
+        </div>
 
-        <section id="status-bar">
-            <p id="status-bar-title">Status Bar</p>
-            <img id="avatar-image" src="" alt="avatar image">
-            <p id="username">Name: </p>
-            <p id="days-left">Days Left: </p>
-            <p id="clues-title">Clues: </p>
-            <ul id="clues-list"></ul>
-        </section>
+        <div id="map-area">
 
-        <section id="map-area">
-            <ul id="location-links"></ul>
-        </section>
+            <div id="prompt">
+                <p>Choose a</p> 
+                <p>location</p> 
+                <p>based on</p>
+                <p>your most</p> 
+                <p>recent clue.</p>
+            </div>
 
-    </main>
+            <div id="map-container">
+                <div id="map"></div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="left">
+        <div id="avatar-image-container">
+            <img src="../assets/img/detective-1-ver2.png" alt="avatar-image">
+        </div>
+        <div id="status-bar-container">
+            <div id="user-info">
+                <p id="username">Name: </p>
+                <p id="days-left">Days Left: </p>
+                <p id="clues-title">Clues: </p>
+                <ul id="clues-list"></ul>
+            </div>
+        </div>
+    </div>
+
     
     <script type="module" src="../src/map.js"></script>
 </body>

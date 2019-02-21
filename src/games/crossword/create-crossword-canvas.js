@@ -3,17 +3,17 @@ import saveUser from '../../functions/saveUser.js';
 import allGames from '../all-games-list.js';
 
 
-function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) {
+function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
-    gameSection.appendChild(descriptionP);
+    description.appendChild(descriptionP);
 
     const instructions = document.createElement('p');
     instructions.textContent = allGames[1].description;
-    gameSection.appendChild(instructions);
+    instructionSection.appendChild(instructions);
     const promptP = document.createElement('p');
     promptP.textContent = '"I need a four letter word for flying that ends in an \'o\'."';
-    gameSection.appendChild(promptP);
+    prompt.appendChild(promptP);
 
     const crosswordForm = document.createElement('form');
     const guessInput = document.createElement('input');
@@ -36,7 +36,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
 
     crosswordForm.addEventListener('submit', function(event) {
         event.preventDefault();
-        descriptionP.hidden = true;
+        // descriptionP.hidden = true;
 
         const formData = new FormData(crosswordForm);
         const wordGuess = formData.get('guess');
@@ -46,7 +46,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
             wrongGuessP.textContent = 'Sorry chum, ' + wordGuess + ' ain\'t what I\'m looking for. Guess again.';
             wrongGuesses++;
         } else {
-            gameSection.hidden = true;
+            // gameSection.hidden = true;
             const winMessageP = document.createElement('p');
             winMessageP.textContent = currentLocation.clue;
             gameOutcome.appendChild(winMessageP);
@@ -56,7 +56,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user) 
         }  
         
         if(wrongGuesses === 3) {
-            gameSection.hidden = true;
+            // gameSection.hidden = true;
             const loseMessageP = document.createElement('p');
             loseMessageP.textContent = 'You lost this game and wasted a day, try again tomorrow.';
             gameOutcome.appendChild(loseMessageP);

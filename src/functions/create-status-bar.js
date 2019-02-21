@@ -1,5 +1,4 @@
 function createStatusBar(user) {
-    const avatarImage = document.getElementById('avatar-image');
     const username = document.getElementById('username');
     const daysLeft = document.getElementById('days-left');
     const cluesList = document.getElementById('clues-list');
@@ -17,7 +16,6 @@ function createStatusBar(user) {
         cluesList.appendChild(clueLi);
     }
     
-    avatarImage.src = '';
     username.textContent += user.name;
     daysLeft.textContent += user.daysLeft;
 }

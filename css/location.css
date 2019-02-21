@@ -1,0 +1,103 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 2% 98%;
+}
+
+
+/* right side */
+#right {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 5% 95%;
+}
+#right-top {
+    grid-row-start: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+}
+#nav-bar a {
+    margin-left: 20px;
+    margin-right: 40px;
+    color: white;
+}
+#right-bottom {
+    grid-row-start: 2;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+#right-bottom-left {
+    grid-column-start: 1;
+}
+#right-bottom-right {
+    grid-column-start: 2;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+#right-bottom-right-top {
+    grid-row-start: 1;
+    display: grid;
+    grid-template-columns: 15% 60% 25%;
+}
+#location-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+#description {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+#instructions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#right-bottom-right-bottom {
+    grid-row-start: 2;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#game-right {
+    grid-column-start: 2
+}
+#game-left {
+    grid-column-start: 1
+}
+
+
+/* left side */
+#left {
+    grid-column-start: 1;
+    grid-row-start: 2;
+
+    display: grid;
+    grid-template-rows: 40% 60%; 
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+#avatar-image-container {
+    grid: row start 1;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#status-bar-container {
+    grid-row-start: 2;
+
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+#user-info {
+    grid-column-start: 2;
+}

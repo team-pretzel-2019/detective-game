@@ -1,0 +1,140 @@
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 2% 98%;
+
+    color: white;
+}
+
+#index-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/* right half of the page */
+#right {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    display: grid;
+    grid-template-rows: 5% 15% 80%
+}
+
+#nav-bar {
+    grid-row-start: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* margin-right: 30px; */
+    background-color: rgb(0, 0, 0);
+}
+#nav-bar a {
+    margin-left: 20px;
+    margin-right: 40px;
+    color: white;
+}
+#map-header {
+    grid-row-start: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+}
+h1 {
+    margin: 0;
+    color: red;
+}
+#map-header p {
+    margin: 0;
+}
+#map-area {
+    grid-row-start: 3;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+#prompt {
+    grid-column-start: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+#prompt p {
+    font-size: 25px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 70px;
+}
+#map-container {
+    grid-column-start: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#map {
+    background-image: url('../assets/img/our-fair-city.png');
+    background-size: 120%;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    height: 450px;
+    width: 450px;
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    color: red;
+    margin-right: 250px;
+}
+#joesbar {
+    grid-column-start: 5;
+    grid-row-start: 4;
+}
+#joesbar:hover {
+    transform: scale(1.4);
+}
+#manestreetbarbers {
+    grid-column-start: 9;
+    grid-row-start: 6;
+}
+#manestreetbarbers:hover {
+    transform: scale(1.4);
+}
+#penthouseapartment {
+    grid-column-start: 5;
+    grid-row-start: 7;
+}
+#penthouseapartment:hover {
+    transform: scale(1.4);
+}
+
+
+/* left half of the page */
+#left {
+    grid-column-start: 1;
+    grid-row-start: 2;
+
+    display: grid;
+    grid-template-rows: 40% 60%; 
+    background-color: rgb(0, 0, 0);
+}
+#avatar-image-container {
+    grid-row-start: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#status-bar-container {
+    grid-row-start: 2;
+
+    display: grid;
+    grid-template-columns: 10% 90%;
+}
+#user-info {
+    grid-column-start: 2;
+}
