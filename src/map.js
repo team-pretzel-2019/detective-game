@@ -2,6 +2,7 @@ import locationList from '../src/location-list.js';
 import saveUser from './functions/saveUser.js';
 import loadUser from './functions/loadUser.js';
 import createStatusBar from './functions/create-status-bar.js';
+import updateStatusBar from './functions/update-status-bar.js';
 
 const locationLinks = document.getElementById('map');
 
@@ -20,6 +21,7 @@ for(let i = 0; i < locationList.length; i++) {
             link.href = 'location.html?name=' + encodeURIComponent(location.name);
         } else {
             user.daysLeft--;
+            updateStatusBar(user);
             saveUser(user);
         }
 
@@ -27,7 +29,7 @@ for(let i = 0; i < locationList.length; i++) {
             window.location = 'end.html';
         }
     });
-
+    
     link.textContent = location.title;
     // add id tag to each location by their object name
     link.id = location.name;
