@@ -1,0 +1,118 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-end;
+    background: rgb(33, 33, 33);
+    width: 100%;
+    height: 60px;
+}
+
+header a {
+    display: flex;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    align-items: center;
+    margin-right: 50px;
+
+}
+
+main {
+    margin: 0px auto;
+    background: url('../assets/img/credits-background-1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 55px auto;
+}
+
+.detective img{
+    width: 200px;
+}
+
+.detective-description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+}
+
+hr {
+    color: darkgrey
+}
+
+footer {
+    background-color: rgb(174, 174, 174);
+    text-align: center;
+    padding: 10px 0px;
+}
+
+#cursive {
+    font-family: 'Great Vibes', cursive;
+    font-size: 72px;
+    color:black;
+    -webkit-text-stroke: 1px black;
+}
+
+.scroll-up p {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 60px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+
+}
+
+
+/* testing scrolling up */
+
+.scroll-up {
+ height: 800px;	
+ overflow: hidden;
+ position: relative;
+}
+.scroll-up p {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ margin: 0;
+ line-height: 50px;
+ text-align: center;
+ /* Starting position */
+ -moz-transform:translateY(100%);
+ -webkit-transform:translateY(100%);	
+ transform:translateY(100%);
+ /* Apply animation to this element */	
+ -moz-animation: scroll-up 21s linear infinite;
+ -webkit-animation: scroll-up 21s linear infinite;
+ animation: scroll-up 21s linear infinite;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-up {
+ 0%   { -moz-transform: translateY(100%); }
+ 100% { -moz-transform: translateY(-210%); }
+}
+@-webkit-keyframes scroll-up {
+ 0%   { -webkit-transform: translateY(100%); }
+ 100% { -webkit-transform: translateY(-210%); }
+}
+@keyframes scroll-up {
+ 0%   { 
+ -moz-transform: translateY(100%); /* Browser bug fix */
+ -webkit-transform: translateY(100%); /* Browser bug fix */
+ transform: translateY(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateY(-210%); /* Browser bug fix */
+ -webkit-transform: translateY(-210%); /* Browser bug fix */
+ transform: translateY(-210%); 
+ }
+}
