@@ -1,9 +1,27 @@
+html {
+    background-image: url('../assets/img/locations/boss-background-1.jpg');
+}
+
 #range {
     display: flex;
     justify-content: center;
 }
 
+#pop-up {
+    background-color: white;
+    width: 300px;
+    position: relative;
+    margin: 0px auto;
+    text-align: center;
+}
+
+button {
+    width: 200px;
+}
+
 #villain {
     height: 100px;
     position: relative;
+    top: 400px;
+
 }
