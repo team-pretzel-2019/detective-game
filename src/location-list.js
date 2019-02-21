@@ -7,7 +7,8 @@ const locationList = [
         description: 'You\'ve been to Joe\'s before, it\'s a seedy spot owned by the establishment\'s namesake who\'s a crooked ex-cop. When you arrive the place is dead. There are a few sad fools drinking their lives away while Joe pretends to clean glasses behind the bar. You address Joe, "You still running games downstairs?" He stares blankly at you. "I guess so," answering your own question. You open the well-used door marked DO NOT ENTER and descend the stairs. Down here there\'s noise, smoke, and excitement. You address the room, "Anyone been here recently that likes to write notes on napkins?" "Maybe." A pencil-thin man says out of the corner of his mouth. "Maybe we play for it?" you propose. He smiles, "Your funeral, sucker!"',
         requiredClues: 1,
         icon: '../assets/img/icons/cocktail-icon-1.png',
-        tallImage: '../assets/img/locations/casino-location-tall-1.jpg' 
+        tallImage: '../assets/img/locations/casino-location-tall-1.jpg',
+        gameImage: '../assets/img/locations/casino-location-tall-2.jpg'
     },
     {
         name: 'manestreetbarbers',
@@ -17,7 +18,8 @@ const locationList = [
         description: 'You can smell the sandalwood from the street. This must be the place the pencil-thin man was yapping about. Unfortunately it looks like it\'s closed. Fortunately you see a balding barber inside crouched over a newspaper playing the crosswords. After knocking on the door the barber greets you, "Get lost, chum! We\'re closed!" He turns to return to his rag. Keeping your composure you holler through the door, "Let me help you with that puzzle, friend." The barber halts in his tracks, "What\'s it to you, chum?" You clear your throat, "Just need some particulars on one of your customers." He opens up the door. "Well, I hope you aren\'t as dumb as you look. I\'ve got one word left, but it\'s got me flummoxed."',
         requiredClues: 2,
         icon: '../assets/img/icons/barber-icon-1.png',
-        tallImage: '../assets/img/locations/barber-location-tall-1.jpg' 
+        tallImage: '../assets/img/locations/barber-location-tall-1.jpg',
+        gameImage: '../assets/img/locations/casino-location-tall-2.jpg'
     },
     {
         name: 'penthouseapartment',

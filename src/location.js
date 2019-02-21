@@ -13,6 +13,7 @@ const description = document.getElementById('description');
 const instructionSection = document.getElementById('instructions');
 const prompt = document.getElementById('prompt');
 const tallImageDiv = document.getElementById('right-bottom-left');
+const gameImageDiv = document.getElementById('game-right');
 
 const user = loadUser();
 createStatusBar(user);
@@ -42,6 +43,10 @@ if(currentLocation.id === 'location2') {
     const tallImage = document.createElement('img');
     tallImage.src = currentLocation.tallImage;
     tallImageDiv.appendChild(tallImage);
+    const gameImage = document.createElement('img');
+    gameImage.src = currentLocation.gameImage;
+    gameImageDiv.appendChild(gameImage);
+
 }
 if(currentLocation.id === 'location3') {
     createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);

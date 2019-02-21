@@ -2,12 +2,12 @@ import saveUser from './functions/saveUser.js';
 
 const titleArea = document.getElementById('title');
 const startStoryButton = document.getElementById('start-story');
-const introArea = document.getElementById('intro');
+const introContainer = document.getElementById('intro-container');
 const userProfileForm = document.getElementById('user-profile');
 
 startStoryButton.addEventListener('click', function() {
     titleArea.hidden = true;
-    introArea.hidden = false;
+    introContainer.hidden = false;
 });
 
 userProfileForm.addEventListener('submit', function(event) {
