@@ -28,9 +28,20 @@ body {
     align-items: center;
     background-color: rgb(0, 0, 0);
 }
+#nav-bar {
+    grid-row-start: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* margin-right: 30px; */
+    background-color: rgb(0, 0, 0);
+}
 #nav-bar a {
     margin-left: 20px;
     margin-right: 40px;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
     color: white;
 }
 #right-bottom {

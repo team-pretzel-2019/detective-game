@@ -15,7 +15,7 @@
         <section id="title">
             <img src="./assets/img/noir-title-FINAL.png" alt="Before the Week Ends title card">
             <p>An interactive whodunnit.</p>
-            <button id="start-story">Begin Story</button>
+            <button id="start-story"><span id="begin-story">Begin Story</span></button>
         </section>
 
         <div id="intro-container" hidden>
@@ -24,7 +24,7 @@
                 <p>Anyway, the dead body. Looks like the sack of bones was tossed around real nice. And what’s more, there’s a napkin pinned to the body - cute. Scrawled on it is a message written in script a 4th grader would be ashamed of: “You have 7 days to find my daughter. No cops or she ends up in the river.” Conveniently, the napkin has an inscription: “Joe’s Bar”. Your first clue...</p>
                 <form id="user-profile">
                     Name: 
-                    <input type="text" name="name" required>
+                    <input id="name-input" type="text" name="name" required>
                     Choose your detective:
                     <label>
                         <input type="radio" name="avatar" value="sloan" required>
@@ -35,7 +35,7 @@
                         <img src="./assets/img/avatars/detective-avatar-2.png" alt="detective riley icon" style="vertical-align: middle">
                     </label>
                     <br>
-                    <button>Start</button>
+                    <button id="start">Start</button>
                 </form>
             </section>
         </div>

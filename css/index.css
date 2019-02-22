@@ -30,9 +30,10 @@ main {
     text-align: center;
     font-size: 50px;
     font-family: 'Inconsolata', monospace;
+    text-shadow: 1px 1px 3px black;
 }
 
-button {
+#start {
     font-size: 18px;
     padding: 15px 25px;
     background-color: #cf2118;
@@ -42,7 +43,7 @@ button {
     text-transform: uppercase;
  } 
 
-button:hover {
+#start:hover {
     background-color: darkred;
     box-shadow: 0 0 10px 2px rgb(150, 20, 20);
 }
@@ -61,6 +62,7 @@ button:hover {
     padding: 10px;
     text-align: center;
     margin: 0px auto;
+    font-size: 22px;
 }
 
 #intro img {
@@ -70,3 +72,68 @@ button:hover {
 #intro button {
     margin: 10px 0px;
 }
+
+#name-input {
+    padding: 4px;
+    font-size: 20px;
+}
+
+#start-story {
+    text-align: center;
+    border-radius: 1.5px;
+    font-size: 22px;
+    padding: 15px 25px;
+    background-color: white;
+    font-family: 'Archivo Black', sans-serif;
+    color: #cf2118;
+    border: none;
+    text-transform: uppercase;
+   }
+   #begin-story {
+    text-decoration: none;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #cf2118;
+   }
+   #start-story #begin-story {
+    color: #cf2118;
+    font-family: 'Archivo Black', sans-serif;
+   }
+   #start-story #begin-story:hover {
+    -webkit-animation: neon1 1.5s ease-in-out infinite alternate;
+    -moz-animation: neon1 1.5s ease-in-out infinite alternate;
+    animation: neon1 1.5s ease-in-out infinite alternate;
+   }
+   #start-story #begin-story:hover {
+    color: #ffffff;
+   }
+   @-webkit-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #cf2118, 0 0 70px #cf2118, 0 0 80px #cf2118, 0 0 100px #cf2118, 0 0 150px #cf2118;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #cf2118, 0 0 35px #cf2118, 0 0 40px #cf2118, 0 0 50px #cf2118, 0 0 75px #cf2118;
+    }
+   }
+   @-moz-keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #cf2118, 0 0 70px #cf2118, 0 0 80px #cf2118, 0 0 100px #cf2118, 0 0 150px #cf2118;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #cf2118, 0 0 35px #cf2118, 0 0 40px #cf2118, 0 0 50px #cf2118, 0 0 75px #cf2118;
+    }
+   }
+   @keyframes neon1 {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #cf2118, 0 0 70px #cf2118, 0 0 80px #cf2118, 0 0 100px #cf2118, 0 0 150px #cf2118;
+    }
+    to {
+      text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #cf2118, 0 0 35px #cf2118, 0 0 40px #cf2118, 0 0 50px #cf2118, 0 0 75px #cf2118;
+    }
+   }
+   @media (max-width: 650px) {
+    #start-story {
+      font-size: 3.5em;
+    }
+   }
