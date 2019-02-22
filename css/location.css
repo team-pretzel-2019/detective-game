@@ -209,7 +209,7 @@ button:hover {
 }
 
 #avatar-image-container img {
-    width: 150px;
+    width: 70%;
 }
 #status-bar-container {
     grid-row-start: 2;

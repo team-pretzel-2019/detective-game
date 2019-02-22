@@ -86,6 +86,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
             wrongGuesses++;
         } else {
             instructions.hidden = true;
+            wrongGuessP.textContent = null;
             descriptionP.textContent = currentLocation.clue;
             const continueButton = document.createElement('a');
             continueButton.textContent = 'continue...';

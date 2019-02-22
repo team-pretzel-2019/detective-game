@@ -15,7 +15,7 @@ const allGames = [
         name: 'lockeddoor',
         id: 'game3',
         title: 'Locked Door',
-        description: 'Locked Door: Hurry! Violet is on the other side and you must get her out. Violet has managed to get you first three numbers: 1, 2, and 3. You have to guess the fourth based on clues you have seen before.',
+        description: 'Locked Door: Hurry! Violet is on the other side and you must get her out. Violet has managed to get you first three numbers: 2, 3, and 5. You have to guess the fourth based on clues you have seen before.',
     },
     {
         name: 'shootout',
