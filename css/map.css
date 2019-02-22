@@ -146,7 +146,7 @@ h1 {
 }
 
 #avatar-image-container img {
-    width: 200px;
+    width: 90%;
 }
 #status-bar-container {
     grid-row-start: 2;

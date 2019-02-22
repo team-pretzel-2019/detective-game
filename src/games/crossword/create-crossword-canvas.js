@@ -22,9 +22,11 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, 
     guessInput.placeholder = 'Enter guess here';
     crosswordForm.appendChild(guessInput);
 
+    const buttonP = document.createElement('p');
     const submitButton = document.createElement('button');
     submitButton.textContent = 'Guess Word';
-    crosswordForm.appendChild(submitButton);
+    buttonP.appendChild(submitButton);
+    crosswordForm.appendChild(buttonP);
 
     gameSection.appendChild(crosswordForm);
     

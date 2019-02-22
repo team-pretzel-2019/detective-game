@@ -156,7 +156,7 @@ button:hover {
 }
 
 #avatar-image-container img {
-    width: 200px;
+    width: 90%;
 }
 #status-bar-container {
     grid-row-start: 2;
@@ -178,4 +178,9 @@ button:hover {
 
 .icon {
     height: 20px;
+}
+
+input {
+    padding: 10px 15px;
+    margin-top: 10px;
 }
