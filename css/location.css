@@ -99,7 +99,7 @@ body {
     border-right: 1px solid red;
     padding-right: 40px;
     margin-bottom: 40px; */
-    font-size: 12px;
+    font-size: 18px;
 }
 #description p {
     margin-top: 20px;
@@ -107,8 +107,10 @@ body {
     margin-right: 15px;
 }
 #description a {
-    margin-left: auto;
-    margin-right: auto;
+   color: #cf2118; 
+   text-transform: uppercase;
+   display: block;
+   margin-top: 20px;
 }
 /* #instructions {
     display: flex;
@@ -127,6 +129,11 @@ body {
 #right-bottom-right-bottom img {
     /* max-width: 100%;
     max-height: 100%; */
+}
+
+#game p {
+    display: block;
+    margin-top: 20px;
 }
 #game-right {
     grid-column-start: 2;

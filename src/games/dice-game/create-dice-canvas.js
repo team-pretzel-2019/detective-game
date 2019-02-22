@@ -2,7 +2,7 @@ import diceGame from './dice-game.js';
 import saveUser from '../../functions/saveUser.js';
 import allGames from '../all-games-list.js';
 
-function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt) {
+function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, description) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
     description.appendChild(descriptionP);
@@ -89,10 +89,12 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
         resultMessage.textContent = gameResult.result;
 
         if(gameResult.result === 'Player Wins!') {
+            descriptionP.textContent = currentLocation.clue;
+            descriptionP.appendChild(brake);
+            descriptionP.appendChild(mapAnchor);
+            instructions.hidden = true;
             const clueP = document.createElement('p');
             clueP.textContent = currentLocation.clue;
-            gameOutcome.appendChild(clueP);
-            gameOutcome.appendChild(mapAnchor);
             user.receivedClues++;
             user.daysLeft--;
             saveUser(user);
