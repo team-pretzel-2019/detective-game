@@ -2,7 +2,7 @@ import checkCrossword from './check-crossword.js';
 import saveUser from '../../functions/saveUser.js';
 import allGames from '../all-games-list.js';
 
-function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt) {
+function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, prompt) {
     const descriptionP = document.createElement('p');
     descriptionP.textContent = currentLocation.description;
     description.appendChild(descriptionP);
@@ -12,7 +12,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, 
     description.appendChild(instructions);
 
     const promptP = document.createElement('p');
-    promptP.textContent = '"I need a four letter word for flying that ends in an \'o\'."';
+    promptP.textContent = '"Ten accross: I need a four letter word for Mexican currency that ends in an \'o\'."';
     prompt.appendChild(promptP);
 
     const crosswordForm = document.createElement('form');
@@ -52,10 +52,10 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, 
             wrongGuessP.textContent = 'Sorry chum, ' + wordGuess + ' ain\'t what I\'m looking for. Guess again.';
             wrongGuesses++;
         } else {
-            const winMessageP = document.createElement('p');
-            winMessageP.textContent = currentLocation.clue;
-            gameOutcome.appendChild(winMessageP);
-            gameOutcome.appendChild(mapAnchor);
+            wrongGuessP.textContent = null;
+            instructions.hidden = true;
+            descriptionP.textContent = currentLocation.clue;
+            descriptionP.appendChild(mapAnchor);
             user.receivedClues++;
             user.daysLeft--;
             saveUser(user);

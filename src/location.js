@@ -36,10 +36,12 @@ for(let i = 0; i < locationList.length; i++) {
     }
 }
 
-locationHeader.textContent = currentLocation.title;
+const titleH1 = document.createElement('h1');
+titleH1.textContent = currentLocation.title;
+locationHeader.appendChild(titleH1);
 
 if(currentLocation.id === 'location1') {
-    createDiceCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
+    createDiceCanvas(gameSection, currentLocation, gameOutcome, user, description);
     const tallImage = document.createElement('img');
     tallImage.src = currentLocation.tallImage;
     tallImageDiv.appendChild(tallImage);
@@ -48,7 +50,7 @@ if(currentLocation.id === 'location1') {
     gameImageDiv.appendChild(gameImage);
 }
 if(currentLocation.id === 'location2') {
-    createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, instructionSection, prompt);
+    createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, description, prompt);
     const tallImage = document.createElement('img');
     tallImage.src = currentLocation.tallImage;
     tallImageDiv.appendChild(tallImage);

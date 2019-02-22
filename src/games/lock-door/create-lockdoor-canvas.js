@@ -85,22 +85,17 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
             gameSection.appendChild(wrongGuessP);
             wrongGuesses++;
         } else {
-            // gameSection.hidden = true;
-            // const mapButton = document.getElementById('map-button');
-            // mapButton.hidden = true;
-            const winMessage = document.createElement('p');
-            winMessage.textContent = currentLocation.clue;
+            instructions.hidden = true;
+            descriptionP.textContent = currentLocation.clue;
             const continueButton = document.createElement('a');
             continueButton.textContent = 'continue...';
             continueButton.href = './boss.html';
-            gameOutcome.appendChild(winMessage);
-            gameOutcome.appendChild(continueButton);
+            descriptionP.appendChild(continueButton);
 
-            window.setTimeout(goToBoss, 2000);
+            window.setTimeout(goToBoss, 12000);
         }
 
         if(wrongGuesses === 3) {
-            // gameSection.hidden = true;
             const loseMessage = document.createElement('p');
             loseMessage.textContent = '"It didn\'t work. I hear him coming. HURRY, get out of here before he gets you too! Come back later!';
             gameOutcome.appendChild(loseMessage);

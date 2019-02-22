@@ -84,8 +84,10 @@ body {
     /* padding-right: 40px; */
     /* margin-bottom: 40px; */
 }
-#location-title p {
-    margin-top: 15px;
+#location-title h1 {
+    display: block;
+    font-size: 48px;
+    margin-top: 55px;
     margin-left: 8px;
 }
 #description {
@@ -129,6 +131,11 @@ body {
 #right-bottom-right-bottom img {
     /* max-width: 100%;
     max-height: 100%; */
+}
+
+#prompt p {
+    display: block;
+    margin-top: 20px;
 }
 
 #game p {
