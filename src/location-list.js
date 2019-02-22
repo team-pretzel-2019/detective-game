@@ -29,7 +29,8 @@ const locationList = [
         description: 'The doorman shows you to the private elevator when you announce you are an ophthalmologist personally delivering an ocular prosthesis. The elevator door opens and your eyes can barely take in the palatial, immaculate suite. The bar is fully-stocked. As you waltz towards the liquor a shout emanates from a corner room, "You loaf! Let me out!" "I\'m no loaf - I\'m a stout cookie," you reply. "Who\'s there?" the voice wimpers. You move towards the door, "I\'m here to help." You try the handle but it\'s locked with a strange contraption. "You\'re not him, but he\'ll be here soon. I\'ve heard him mutter the first three numbers under his breath: one, two, and three. You\'re gonna have to guess the fourth. Quickly, get it open before he gets back!"',
         requiredClues: 3,
         icon: '../assets/img/icons/penthouse-icon-1.png',
-        tallImage: '../assets/img/locations/penthouse-location-tall-1.jpg' 
+        tallImage: '../assets/img/locations/penthouse-location-tall-1.jpg',
+        gameImage: '../assets/img/locations/lock-the-door.jpg'
     }
 ];
  

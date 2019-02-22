@@ -62,6 +62,9 @@ if(currentLocation.id === 'location3') {
     const tallImage = document.createElement('img');
     tallImage.src = currentLocation.tallImage;
     tallImageDiv.appendChild(tallImage);
+    const gameImage = document.createElement('img');
+    gameImage.src = currentLocation.gameImage;
+    gameImageDiv.appendChild(gameImage);
 }
 
 saveUser(user);
