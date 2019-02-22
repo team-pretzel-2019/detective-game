@@ -2,7 +2,7 @@ const locationList = [
     {
         name: 'joesbar',
         id: 'location1',
-        clue: '"Well, there goes my winning streak!" the pencil-thin man sighs. He leans in close, "So, there was a fella with a glass eye who was in here earlier scratching on a napkin. He smelled like sandalwood, must\'ve just had a shave. That\'s all I got for ya. Now make like a tree!"',
+        clue: '"Well, there goes my winning streak! There was a fella here earlier scratching on a napkin. He smelled like sandalwood, must\'ve just had a shave. That\'s all I got for ya. Now make like a tree!"',
         title: 'Joe\'s Bar',
         description: 'You\'ve been to Joe\'s before, it\'s a seedy spot owned by the establishment\'s namesake who\'s a crooked ex-cop. When you arrive the place is dead. There are a few sad fools drinking their lives away while Joe pretends to clean glasses behind the bar. You address Joe, "You still running games downstairs?" He stares blankly at you. "I guess so," answering your own question. You open the well-used door marked DO NOT ENTER and descend the stairs. Down here there\'s noise, smoke, and excitement. You address the room, "Anyone been here recently that likes to write notes on napkins?" "Maybe." A pencil-thin man says out of the corner of his mouth. "Maybe we play for it?" you propose. He smiles, "Your funeral, sucker!"',
         requiredClues: 1,

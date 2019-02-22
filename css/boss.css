@@ -4,6 +4,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-family: 'Inconsolata', monospace;
 }
 
 #range {
@@ -13,16 +14,30 @@ html {
 
 #pop-up {
     background-color: rgba(255, 255, 255, .9);
-    width: 80%;
+    width: 70%;
     position: relative;
     bottom: 45px;
     margin: 0px auto;
     text-align: center;
-    padding: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+
 }
 
 button {
-    width: 200px;
+    font-size: 18px;
+    padding: 15px 25px;
+    background-color: #cf2118;
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+ } 
+
+button:hover {
+    background-color: darkred;
+    box-shadow: 0 0 10px 2px rgb(150, 20, 20);
 }
 
 #villain {

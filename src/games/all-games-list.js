@@ -3,7 +3,7 @@ const allGames = [
         name: 'dicegame',
         id: 'game1',
         title: 'Dice Game',
-        description: 'Dice Roll Game: In order to win, you must roll your two dice higher than the sum of the clue master\'s dice roll. Click the button to play. If you win, you receive the second clue: the clue master tells you that the villain mentioned his beard was scratchy.',
+        description: 'Dice Roll Game: In order to win, you must roll your two dice higher than the sum of the clue master\'s dice roll. Click the button to play.',
     },
     {
         name: 'crosswordpuzzle',

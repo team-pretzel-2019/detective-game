@@ -8,7 +8,7 @@ test('if player roll is lower, return \'player loses\'', function(assert) {
     const diceroll1 = 3;
     const diceroll2 = 5;
     const result = compareRolls(diceroll1, diceroll2);
-    const expected = 'player loses';
+    const expected = 'Player Loses';
     assert.equal(result, expected);
 });
 
@@ -16,7 +16,7 @@ test('if player roll is higher, return \'player wins\'', function(assert) {
     const diceroll1 = 6;
     const diceroll2 = 5;
     const result = compareRolls(diceroll1, diceroll2);
-    const expected = 'player wins';
+    const expected = 'Player Wins!';
     assert.equal(result, expected);
 });
 
@@ -24,6 +24,6 @@ test('if dice rolls are equal, return \'tie\'', function(assert) {
     const diceroll1 = 6;
     const diceroll2 = 6;
     const result = compareRolls(diceroll1, diceroll2);
-    const expected = 'tie';
+    const expected = 'Tie';
     assert.equal(result, expected);
 });

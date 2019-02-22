@@ -96,8 +96,12 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     background-image: url('../assets/img/credits-background-1.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+}
+#right-bottom-right-bottom img {
+    max-width: 100%;
+    max-height: 100%;
 }
 #game-right {
     grid-column-start: 2
@@ -109,12 +113,27 @@ body {
     height: 100%;
 }
 #game-left {
-    grid-column-start: 1
+    grid-column-start: 1;
+    margin-left: 30px;
+    margin-top: 15px;
+    font-size: 28px;
+    line-height: 1.2;
 }
-#prompt {
-    display: flex;
-    justify-content: center;
+button {
+    font-size: 18px;
+    padding: 15px 25px;
+    background-color: #cf2118;
+    font-family: 'Archivo Black', sans-serif;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    margin: 15px auto;
+ } 
+button:hover {
+    background-color: darkred;
+    box-shadow: 0 0 10px 2px rgb(150, 20, 20);
 }
+
 
 
 

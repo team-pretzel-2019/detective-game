@@ -14,11 +14,6 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
     instructions.textContent = allGames[0].description;
     description.appendChild(instructions);
 
-    // create prompt
-    const promptP = document.createElement('p');
-    promptP.textContent = 'Roll dem dice KID';
-    prompt.appendChild(promptP);
-
     const playButton = document.createElement('button');
     playButton.textContent = 'Roll Dice';
     playButton.id = 'play-button';
@@ -90,7 +85,7 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
 
         resultMessage.textContent = gameResult.result;
 
-        if(gameResult.result === 'player wins') {
+        if(gameResult.result === 'Player Wins!') {
             const clueP = document.createElement('p');
             clueP.textContent = currentLocation.clue;
             gameOutcome.appendChild(clueP);

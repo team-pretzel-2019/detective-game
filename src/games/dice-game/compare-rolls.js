@@ -1,10 +1,10 @@
 function compareRolls(playerRolls, opponentRolls) {
     if(playerRolls < opponentRolls) {
-        return 'player loses';
+        return 'Player Loses';
     } else if(playerRolls > opponentRolls) {
-        return 'player wins';
+        return 'Player Wins!';
     }
-    return 'tie';
+    return 'Tie';
 }
 
 export default compareRolls;
