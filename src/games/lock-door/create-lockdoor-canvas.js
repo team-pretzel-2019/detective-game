@@ -9,7 +9,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
 
     const instructions = document.createElement('p');
     instructions.textContent = allGames[2].description;
-    instructionSection.appendChild(instructions);
+    description.appendChild(instructions);
 
     const promptP = document.createElement('p');
     promptP.textContent = 'Deduce and enter a four digit code to enter!';
@@ -23,6 +23,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
     guessOne.min = '0';
     guessOne.max = '9';
     guessOne.value = '0';
+    guessOne.id = 'num-input';
     codeForm.appendChild(guessOne);
 
     const guessTwo = document.createElement('input');
@@ -31,6 +32,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
     guessTwo.min = '0';
     guessTwo.max = '9';
     guessTwo.value = '0';
+    guessTwo.id = 'num-input';
     codeForm.appendChild(guessTwo);
 
     const guessThree = document.createElement('input');
@@ -39,6 +41,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
     guessThree.min = '0';
     guessThree.max = '9';
     guessThree.value = '0';
+    guessThree.id = 'num-input';
     codeForm.appendChild(guessThree);
 
     const guessFour = document.createElement('input');
@@ -47,6 +50,7 @@ function createLockdoorCanvas(gameSection, currentLocation, gameOutcome, user, d
     guessFour.min = '0';
     guessFour.max = '9';
     guessFour.value = '0';
+    guessFour.id = 'num-input';
     codeForm.appendChild(guessFour);
 
     const buttonP = document.createElement('p');

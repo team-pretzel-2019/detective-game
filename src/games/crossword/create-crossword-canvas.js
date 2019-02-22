@@ -9,7 +9,8 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, 
 
     const instructions = document.createElement('p');
     instructions.textContent = allGames[1].description;
-    instructionSection.appendChild(instructions);
+    description.appendChild(instructions);
+
     const promptP = document.createElement('p');
     promptP.textContent = '"I need a four letter word for flying that ends in an \'o\'."';
     prompt.appendChild(promptP);
