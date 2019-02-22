@@ -12,7 +12,7 @@ function createCrosswordCanvas(gameSection, currentLocation, gameOutcome, user, 
     description.appendChild(instructions);
 
     const promptP = document.createElement('p');
-    promptP.textContent = '"Ten accross: I need a four letter word for Mexican currency that ends in an \'o\'."';
+    promptP.textContent = '"Ten across: I need a four letter word for Mexican currency that ends in an \'o\'."';
     prompt.appendChild(promptP);
 
     const crosswordForm = document.createElement('form');
