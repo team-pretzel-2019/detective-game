@@ -1,26 +1,52 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
-    min-width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Inconsolata', monospace;
 
     display: grid;
-    grid-template-rows: 10% 90%;
+    grid-template-columns: 35% 65%;
 }
 
-#top {
-    grid-row-start: 1; 
+#left {
+    grid-column-start: 1;
+    background-image: url('../assets/img/locations/end-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-#bottom {
-    grid-row-start: 2; 
-
-    display: grid;
-    grid-template-columns: 33% 66%;
+#left img {
 }
 
 #right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    grid-column-start: 2;
     margin-left: 40px;
     margin-right: 40px;
+    display: flex;
+    align-items: center;
+
+}
+
+button {
+    font-size: 18px;
+    padding: 15px 25px;
+    background-color: #cf2118;
+    font-family: 'Archivo Black', sans-serif;
+    border: none;
+    margin: 20px 5px;
+ } 
+
+button a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: darkred;
+    box-shadow: 0 0 10px 2px rgb(150, 20, 20);
 }
