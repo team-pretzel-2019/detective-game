@@ -1,6 +1,9 @@
 import loadUser from '../src/functions/loadUser.js';
 const results = document.getElementById('results');
 
+const soundtrack = new Audio('../assets/audio/end.mp3');
+soundtrack.play();
+
 const user = loadUser();
 
 if(user.daysLeft === 0) {

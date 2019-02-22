@@ -5,6 +5,9 @@ const startStoryButton = document.getElementById('start-story');
 const introContainer = document.getElementById('intro-container');
 const userProfileForm = document.getElementById('user-profile');
 
+const soundtrack = new Audio('./assets/audio/index.mp3');
+soundtrack.play();
+
 startStoryButton.addEventListener('click', function() {
     titleArea.hidden = true;
     introContainer.hidden = false;

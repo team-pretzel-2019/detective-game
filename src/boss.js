@@ -7,6 +7,9 @@ const button = document.getElementById('start-button');
 const popUpSection = document.getElementById('pop-up');
 const winP = document.getElementById('win');
 
+const soundtrack = new Audio('../assets/audio/boss.mp3');
+soundtrack.play(); 
+
 const user = loadUser();
 
 const totalTime = 3000;
