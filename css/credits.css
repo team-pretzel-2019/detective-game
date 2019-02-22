@@ -28,10 +28,6 @@ header a {
 
 }
 
-main {
-    
-}
-
 .row {
     display: flex;
     justify-content: center;
@@ -74,7 +70,6 @@ footer {
 }
 
 
-/* testing scrolling up */
 .scroll-up {
  height: 100vh;	
  overflow: hidden;
@@ -87,16 +82,13 @@ footer {
  margin: 0;
  line-height: 50px;
  text-align: center;
- /* Starting position */
  -moz-transform:translateY(100%);
  -webkit-transform:translateY(100%);	
  transform:translateY(100%);
- /* Apply animation to this element */	
  -moz-animation: scroll-up 21s linear infinite;
  -webkit-animation: scroll-up 21s linear infinite;
  animation: scroll-up 21s linear infinite;
 }
-/* Move it (define the animation) */
 @-moz-keyframes scroll-up {
  0%   { -moz-transform: translateY(100%); }
  100% { -moz-transform: translateY(-210%); }
