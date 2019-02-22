@@ -1,6 +1,13 @@
 body {
     padding: 0px;
     margin: 0px;
+    margin: 0px auto;
+    background: url('../assets/img/credits-background-1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
 }
 
 header {
@@ -22,12 +29,7 @@ header a {
 }
 
 main {
-    margin: 0px auto;
-    background: url('../assets/img/credits-background-1.jpg') no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    
 }
 
 .row {
@@ -75,7 +77,7 @@ footer {
 /* testing scrolling up */
 
 .scroll-up {
- height: 800px;	
+ height: 100vh;	
  overflow: hidden;
  position: relative;
 }
