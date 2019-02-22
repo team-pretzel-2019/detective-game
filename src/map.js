@@ -21,9 +21,6 @@ for(let i = 0; i < locationList.length; i++) {
     const icon = document.createElement('img');
     icon.src = location.icon;
 
-    // get rid of list item elmCreate
-    // const li = document.createElement('li');
-
     link.addEventListener('click', function() {
         if(user.receivedClues === location.requiredClues) {
             link.href = 'location.html?name=' + encodeURIComponent(location.name);
@@ -38,7 +35,6 @@ for(let i = 0; i < locationList.length; i++) {
         }
     });
     
-    // link.textContent = location.title;
     link.id = location.name;
     link.appendChild(icon);
     locationLinks.appendChild(link);

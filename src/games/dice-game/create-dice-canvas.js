@@ -71,7 +71,6 @@ function createDiceCanvas(gameSection, currentLocation, gameOutcome, user, descr
     let gamesLost = 0;
     
     playButton.addEventListener('click', function() {
-        // descriptionP.hidden = true;
 
         const diceSound = new Audio('../../../assets/audio/dice.mp3');
         diceSound.play();
