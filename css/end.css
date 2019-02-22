@@ -7,9 +7,16 @@ body {
     height: 100vh;
     width: 100vw;
     font-family: 'Inconsolata', monospace;
-
     display: grid;
     grid-template-columns: 35% 65%;
+    font-size: 22px;
+}
+h3 {
+    font-family: 'Great Vibes', cursive;
+    color: black;
+    font-size: 72px;
+    display: block;
+    margin-bottom: 45px;
 }
 
 #left {
@@ -17,9 +24,6 @@ body {
     background-image: url('../assets/img/locations/end-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#left img {
 }
 
 #right {
