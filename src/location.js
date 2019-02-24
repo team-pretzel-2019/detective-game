@@ -27,6 +27,8 @@ createStatusBar(user);
 const searchParams = new URLSearchParams(window.location.search);
 const locationName = searchParams.get('name');
 
+// A great chunk of code to wrap in a function and pin down with tests,
+// or TDD from the get-go.
 let currentLocation = {};
 for(let i = 0; i < locationList.length; i++) {
     const location = locationList[i];
