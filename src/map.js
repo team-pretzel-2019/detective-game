@@ -23,6 +23,10 @@ for(let i = 0; i < locationList.length; i++) {
 
     link.addEventListener('click', function() {
         if(user.receivedClues === location.requiredClues) {
+            // note that encodeURIComponent is unnecessary if your
+            // component is alphanumeric. This is mainly for
+            // escaping symbols like $, =, &, #, etc.
+            // See MDN for details on when you'd want to use this method.
             link.href = 'location.html?name=' + encodeURIComponent(location.name);
         } else {
             user.daysLeft--;

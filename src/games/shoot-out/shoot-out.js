@@ -17,6 +17,8 @@ function shootOut(popUpSection, villain, totalTime, winP) {
     villain.addEventListener('click', function() {
         villainHP--;
     });
+    // functions that use conditional logic around Date.now
+    // are ripe for bugs - good TDD opportunity.
     
     let timer = setInterval(function() {
         let timePassed = Date.now() - startTime;

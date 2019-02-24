@@ -5,6 +5,11 @@ const soundtrack = new Audio('../assets/audio/end.mp3');
 soundtrack.play();
 
 const user = loadUser();
+// It's always good to separate logic and data in your apps, as you've
+// mostly been doing. The end messages below would be hard to find and 
+// modify if you wished to add features to your web app.
+// Also bugs love to cluster around branching logic; in spite of its
+// simplicity you might still wish to tdd this conditional block.
 
 if(user.daysLeft === 0) {
     results.textContent = 'The trail\'s gone cold. You read in next week\'s newspaper that a woman named Violet is being tried for the murder of her parent. A man with a glass eye found Violet trying to dump her body in the river...';
